@@ -58,6 +58,7 @@ public class ProjectUAS {
                 break;
                 
             case 2 :
+                // Pesanan
                 System.out.println("=======================");
                 System.out.println("Silahkan Pilih Menu");
                 System.out.println("=======================");
