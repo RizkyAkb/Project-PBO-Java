@@ -29,7 +29,7 @@ public class ProjectUAS {
         int tokoroti = input.nextInt();
         
         switch(tokoroti){
-            // Menu Toko Roti Pak Rayy
+            // Menu Toko Roti Pak Rayydd
             case 1 :
                 System.out.println("1. Roti Manis");
                 System.out.println("   a. Varian 1");
