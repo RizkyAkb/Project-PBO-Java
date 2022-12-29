@@ -3,12 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package varian;
-
+import bahan.*;
 /**
  *
  * @author athrees
  */
 public class Pizza extends BahanVarian{
+<<<<<<< HEAD
 
     @Override
     public double Varian1() {
@@ -19,5 +20,16 @@ public class Pizza extends BahanVarian{
         double hargaVarian1 = this.keju + this.sosis + this. beef + this.bawang;
         return hargaVarian1;
     }
+=======
+>>>>>>> b147e1917aafd754c03f4451d8fb54ced9d287b9
     
+    @Override
+    public double Varian1() {
+        this.keju = 30 * (31000/250);
+        this.sosis = 50 * (80000/1000);
+        this.beef = 50 * (90000/1000);
+        this.bawang = 30 * (40000/500);
+        double hargaVarian1 = this.keju + this.sosis + this.beef + this.bawang;
+        return hargaVarian1;
+    }
 }

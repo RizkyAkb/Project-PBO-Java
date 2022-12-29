@@ -21,10 +21,18 @@ public class RotiManis extends BahanVarian implements Varian2, Varian3{
 
     @Override
     public double varian2() {
+        this.selai = 10 * (25000/500);
+        this.krim = 5 * (30000 / 500);
+        double hargaVarian2 = this.selai + this.krim;
+        return hargaVarian2;
     }
 
     @Override
     public double varian3() {
+        this.keju = 10 * (31000/250);
+        this.sosis = 10 * (80000/1000);
+        double hargaVarian3 = this.keju + this.sosis;
+        return hargaVarian3;
     }
     
     
