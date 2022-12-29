@@ -8,6 +8,7 @@ package bahan;
  *
  * @author RUDI
  */
+//puputanjing
 public abstract class Bahan {
 double tepungTerigu;
 double gulaPasir;
