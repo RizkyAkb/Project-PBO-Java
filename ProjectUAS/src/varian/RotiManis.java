@@ -9,10 +9,23 @@ import bahan.*;
  *
  * @author athrees
  */
-public class RotiManis extends BahanVarian{
+public class RotiManis extends BahanVarian implements Varian2, Varian3{
     
     @Override
     public double Varian1() {
-        this.keju
+        this.keju = 5 * (31000/250);
+        this.coklat = 10 * (29000/500);
+        double hargaVarian1 = this.keju + this.coklat;
+        return hargaVarian1;
     }
+
+    @Override
+    public double varian2() {
+    }
+
+    @Override
+    public double varian3() {
+    }
+    
+    
 }

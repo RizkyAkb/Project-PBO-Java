@@ -18,4 +18,5 @@ public abstract class BahanVarian {
     double bawang;
     
     public abstract double Varian1();
+
 }
