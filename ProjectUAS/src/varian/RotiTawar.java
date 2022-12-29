@@ -14,15 +14,17 @@ public class RotiTawar extends BahanVarian implements Varian2{
     @Override
     public double Varian1() {
         this.coklat = 80 * (29000/500);
+        double hargaVarian1 = this.coklat;
         double hargaJual = (hargaVarian1 + rotitawar.hitungHargaPerPcs()) + ((hargaVarian1 + rotitawar.hitungHargaPerKemasan())*(50/100));
-        return this.coklat;
+        return hargaJual;
     }
 
     @Override
     public double varian2() {
         this.keju = 80 * (31000/250);
+        double hargaVarian2 = this.keju;
         double hargaJual = (hargaVarian2 + rotitawar.hitungHargaPerPcs()) + ((hargaVarian2 + rotitawar.hitungHargaPerKemasan())*(50/100));
-        return this.keju;
+        return hargaJual;
     }
     
 }
