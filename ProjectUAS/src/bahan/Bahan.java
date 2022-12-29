@@ -21,5 +21,6 @@ double esBatu;
 
 public abstract double hitungHargaPerKemasan();
 //public abstract double hitungTotalHargaBahan();
+//puputbabik
 
 }
