@@ -19,6 +19,6 @@ public class Pizza extends BahanVarian{
         this.bawang = 30 * (40000/500);
         double hargaVarian1 = this.keju + this.sosis + this. beef + this.bawang;
         double hargaJual = (hargaVarian1 + Pizza.hitungHargaPerPcs()) + ((hargaVarian1 + Pizza.hitungHargaPerKemasan())*(50/100));
-        return hargaVarian1;
+        return hargaJual;
     }
 }
