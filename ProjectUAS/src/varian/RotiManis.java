@@ -4,18 +4,18 @@
  */
 package varian;
 import bahan.*;
-
 /**
  *
  * @author athrees
  */
 public class RotiManis extends BahanVarian implements Varian2, Varian3{
-    
+    HitungBahanManis rotimanis = new HitungBahanManis();
     @Override
     public double Varian1() {
         this.keju = 5 * (31000/250);
         this.coklat = 10 * (29000/500);
         double hargaVarian1 = this.keju + this.coklat;
+        double hargaJual = (hargaVarian1 + rotimanis.hitungHargaPerPcs()) + ((hargaVarian1 + rotimanis.hitungHargaPerKemasan())*(50/100));
         return hargaVarian1;
     }
 
