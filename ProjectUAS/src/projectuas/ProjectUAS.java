@@ -23,12 +23,13 @@ public class ProjectUAS {
         System.out.println("2. Pesan");
         System.out.println("3. Keranjang");
         System.out.println("4. Total Harga");
+        System.out.println("5. Exit");
         System.out.println("===================");
         System.out.print("Pilihan : ");
         Scanner input = new Scanner (System.in);
-        int tokoroti = input.nextInt();
+        int mainmenu = input.nextInt();
         
-        switch(tokoroti){
+        switch(mainmenu){
             // Menu Toko Roti Pak Rayyyy
             case 1 :
                 System.out.println("1. Roti Manis");
@@ -53,6 +54,26 @@ public class ProjectUAS {
                 System.out.println("3. Pizza");
                 System.out.println("   a. Varian 1");
                 System.out.println("      - Topping = Keju, Sosis, Smoked Beef, Bawang Bombay");
+                System.out.println("===========================================================");
+                break;
+                
+            case 2 :
+                System.out.println("=======================");
+                System.out.println("Silahkan Pilih Menu");
+                System.out.println("=======================");
+                System.out.println("1. Roti Manis Varian 1");
+                System.out.println("2. Roti Manis Varian 2");
+                System.out.println("3. Roti Manis Varian 3");
+                System.out.println("4. Roti Tawar Varian 1");
+                System.out.println("5. Roti Tawar Varian 2");
+                System.out.println("6. Pizza Varian 1");
+                System.out.print("Pilih Menu : ");
+                int pesan = input.nextInt();
+                break;
+            
+            // EXIT
+            
+                
         }
         
         
