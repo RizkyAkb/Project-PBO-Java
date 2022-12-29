@@ -4,19 +4,20 @@
  */
 package varian;
 import bahan.*;
-
 /**
  *
  * @author athrees
  */
 public class RotiManis extends BahanVarian implements Varian2, Varian3{
-    
+    HitungBahanManis rotimanis = new HitungBahanManis();
     @Override
     public double Varian1() {
         this.keju = 5 * (31000/250);
         this.coklat = 10 * (29000/500);
         double hargaVarian1 = this.keju + this.coklat;
-        return hargaVarian1;
+        double hargaJual = (hargaVarian1 + rotimanis.hitungHargaPerPcs()) + ((hargaVarian1 + rotimanis.hitungHargaPerKemasan())*(50/100));
+//        return hargaVarian1;
+        return hargaJual;
     }
 
     @Override
@@ -24,7 +25,9 @@ public class RotiManis extends BahanVarian implements Varian2, Varian3{
         this.selai = 10 * (25000/500);
         this.krim = 5 * (30000 / 500);
         double hargaVarian2 = this.selai + this.krim;
-        return hargaVarian2;
+        double hargaJual = (hargaVarian2 + rotimanis.hitungHargaPerPcs()) + ((hargaVarian2 + rotimanis.hitungHargaPerPcs()) * (50/100));
+//        return hargaVarian2;
+        return hargaJual;
     }
 
     @Override
@@ -32,7 +35,9 @@ public class RotiManis extends BahanVarian implements Varian2, Varian3{
         this.keju = 10 * (31000/250);
         this.sosis = 10 * (80000/1000);
         double hargaVarian3 = this.keju + this.sosis;
-        return hargaVarian3;
+        double hargaJual = (hargaVarian3 + rotimanis.hitungHargaPerPcs()) + ((hargaVarian3 + rotimanis.hitungHargaPerPcs()) * (50/100));
+//        return hargaVarian3;
+        return hargaJual;
     }
     
     
