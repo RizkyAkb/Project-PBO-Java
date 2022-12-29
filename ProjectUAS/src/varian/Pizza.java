@@ -8,6 +8,16 @@ package varian;
  *
  * @author athrees
  */
-public class Pizza {
+public class Pizza extends BahanVarian{
+
+    @Override
+    public double Varian1() {
+        this.keju = 30 * (31000/250);
+        this.sosis = 50 * (80000/1000);
+        this.beef = 50 * (90000/1000);
+        this.bawang = 30 * (40000/500);
+        double hargaVarian1 = this.keju + this.sosis + this. beef + this.bawang;
+        return hargaVarian1;
+    }
     
 }
