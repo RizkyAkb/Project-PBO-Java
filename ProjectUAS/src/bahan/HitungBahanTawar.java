@@ -10,7 +10,7 @@ package bahan;
  */
 public class HitungBahanTawar extends Bahan{
     @Override
-    public double hitungHargaPerKemasan() {
+    public double hitungHargaPerKemasan(double jumlahPesan) {
         this.tepungTerigu = 1000 * (40000/1000);
         this.gulaPasir = 125 * (25000/1000);
         this.butter = 100 * (23000/500);

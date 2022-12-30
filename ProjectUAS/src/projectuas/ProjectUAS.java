@@ -71,7 +71,7 @@ public class ProjectUAS {
                 System.out.print("Pilih Menu : ");
                 int pesan = input.nextInt();
                 System.out.print("Pilih Jumlah : ");
-                int jumlahPesan = input.nextInt();
+                double jumlahPesan = input.nextDouble();
                 if(pesan == 1){
                     HitungBahanManis hbm = new HitungBahanManis();
                     System.out.println(hbm.hitungHargaPerKemasan(jumlahPesan));                    

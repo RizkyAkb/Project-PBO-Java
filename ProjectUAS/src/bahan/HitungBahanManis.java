@@ -9,10 +9,10 @@ package bahan;
  * @author RUDI
  */
 public class HitungBahanManis extends Bahan{
-    int beratSatuan = 50;
-    int beratTotal = 2350;
+    double beratSatuan = 50.0;
+    double beratTotal = 2350.0;
     @Override
-    public double hitungHargaPerKemasan(int jumlahPesan) {
+    public double hitungHargaPerKemasan(double jumlahPesan) {
         this.tepungTerigu = (1000 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
         this.gulaPasir = (150 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
         this.butter = (150 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
@@ -25,7 +25,7 @@ public class HitungBahanManis extends Bahan{
         double totalBeratDough = this.tepungTerigu + this.gulaPasir + this.butter + 
                 this.ragi + this.susuBubuk + this.susuCair + this.telur 
                 + this.esBatu;
-        return totalBeratDough;
+        return totalBeratDough;        
     }
 
 //    public double hitungHargaPerPcs(){

@@ -9,25 +9,27 @@ package bahan;
  * @author RUDI
  */
 public class HitungBahanPizza extends Bahan{
+    double beratSatuan = 400.0;
+    double beratTotal = 2065.0;
     @Override
-    public double hitungHargaPerKemasan() {
-        this.tepungTerigu = 1000 * (40000/1000);
-        this.gulaPasir = 100 * (25000/1000);
-        this.butter = 100 * (23000/500);
-        this.ragi = 20 * (5000/11);
-        this.susuBubuk = 200 * (39000/1000);
-        this.susuCair = 180 * (24000/1000);
-        this.telur = 50 * (23000/1000);
-        this.esBatu = 300 * (2000/1000);              
+    public double hitungHargaPerKemasan(double jumlahPesan) {
+        this.tepungTerigu = (1000  / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
+        this.gulaPasir = (100 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
+        this.butter = (100 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
+        this.ragi = (20 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
+        this.susuBubuk = (200 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
+        this.susuCair = (180 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
+        this.telur = (50 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
+        this.esBatu = (300 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;            
         
-        double totalHarga = this.tepungTerigu + this.gulaPasir + this.butter + 
+        double totalBeratDough = this.tepungTerigu + this.gulaPasir + this.butter + 
                 this.ragi + this.susuBubuk + this.susuCair + this.telur 
                 + this.esBatu;
-        return totalHarga;
+        return totalBeratDough;
     }
     
-    public double hitungHargaPerPcs(){
-        double hargaPerPcs = Math.ceil(this.hitungHargaPerKemasan() /47);
-        return hargaPerPcs;
-    }
+//    public double hitungHargaPerPcs(){
+//        double hargaPerPcs = Math.ceil(this.hitungHargaPerKemasan() /47);
+//        return hargaPerPcs;
+//    }
 }
