@@ -9,8 +9,8 @@ package bahan;
  * @author RUDI
  */
 public class HitungBahanPizza extends Bahan{
-    double beratSatuan = 400.0;
-    double beratTotal = 2065.0;
+    double beratSatuan = 190.0;
+    double beratTotal = 1950.0;
     @Override
     public double hitungHargaPerKemasan(double jumlahPesan) {
         this.tepungTerigu = (1000  / (this.beratTotal/this.beratSatuan)) * jumlahPesan;

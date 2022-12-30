@@ -5,6 +5,7 @@
 package projectuas;
 
 import bahan.HitungBahanManis;
+import bahan.HitungBahanTawar;
 import java.util.Scanner;
 
 /**
@@ -75,7 +76,15 @@ public class ProjectUAS {
                 if(pesan == 1){
                     HitungBahanManis hbm = new HitungBahanManis();
                     System.out.println(hbm.hitungHargaPerKemasan(jumlahPesan));                    
-                }                
+                }
+                else if (pesan == 4){
+                    HitungBahanTawar hbt = new HitungBahanTawar();
+                    System.out.println(hbt.hitungHargaPerKemasan(jumlahPesan));
+                }
+                else if (pesan == 6){
+                    HitungBahanPizza hbp = new HitungBahanPizza();
+                    System.out.println(hbp.hitungHargaPerKemasan(jumlahPesan));
+                }            
                 break;
             
             // EXIT
