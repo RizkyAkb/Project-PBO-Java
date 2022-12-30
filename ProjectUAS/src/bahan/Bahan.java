@@ -19,7 +19,7 @@ double susuCair;
 double telur;
 double esBatu;
 
-public abstract double hitungHargaPerKemasan();
+public abstract double hitungHargaPerKemasan(int jumlahPesan);
 //public abstract double hitungTotalHargaBahan();
 
 

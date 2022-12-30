@@ -70,6 +70,12 @@ public class ProjectUAS {
                 System.out.println("6. Pizza Varian 1");
                 System.out.print("Pilih Menu : ");
                 int pesan = input.nextInt();
+                System.out.print("Pilih Jumlah : ");
+                int jumlahPesan = input.nextInt();
+                if(pesan == 1){
+                    HitungBahanManis hbm = new HitungBahanManis();
+                    System.out.println(hbm.hitungHargaPerKemasan(jumlahPesan));                    
+                }                
                 break;
             
             // EXIT
