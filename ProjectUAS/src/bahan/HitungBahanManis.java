@@ -12,7 +12,7 @@ public class HitungBahanManis extends Bahan{
     double beratSatuan = 50.0;
     double beratTotal = 2350.0;
     @Override
-    public double[] hitungHargaPerKemasan(double jumlahPesan) {
+    public double hitungBeratBahan(double jumlahPesan) {
         this.tepungTerigu = (1000 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
         this.gulaPasir = (150 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
         this.butter = (150 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
@@ -22,18 +22,33 @@ public class HitungBahanManis extends Bahan{
         this.telur = (80 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
         this.esBatu = (400 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;              
         
-        double[] beratDough = {this.tepungTerigu, this.gulaPasir , this.butter , 
-                this.ragi , this.susuBubuk , this.susuCair , this.telur 
-                , this.esBatu}; 
-//        double totalBeratDough = this.tepungTerigu + this.gulaPasir + this.butter + 
-//                this.ragi + this.susuBubuk + this.susuCair + this.telur 
-//                + this.esBatu;
-        return beratDough;        
+//        double[] beratDough = {this.tepungTerigu, this.gulaPasir , this.butter , 
+//                this.ragi , this.susuBubuk , this.susuCair , this.telur 
+//                , this.esBatu}; 
+        double totalBeratDough = this.tepungTerigu + this.gulaPasir + this.butter + 
+                this.ragi + this.susuBubuk + this.susuCair + this.telur 
+                + this.esBatu;
+        return totalBeratDough;        
     }
 
-//    public double hitungHargaPerPcs(){
-//        double hargaPerPcs = Math.ceil(this.hitungHargaPerKemasan() /47);
-//        return hargaPerPcs;
-//    }
-    
+    public void jumlahBahanYangDibeli(){
+        double jmlTepungTerigu = Math.ceil(this.tepungTerigu/this.kemasanTepungTerigu);
+        double jmlGulaPasir = Math.ceil(this.gulaPasir/this.kemasanGulaPasir);
+        double jmlButter = Math.ceil(this.butter/this.kemasanButter);
+        double jmlRagi = Math.ceil(this.ragi/this.kemasanRagi);
+        double jmlSusuBubuk = Math.ceil(this.susuBubuk/this.kemasanSusuBubuk);
+        double jmlSusuCair = Math.ceil(this.susuCair/this.kemasanSusuCair);
+        double jmlTelur = Math.ceil(this.telur/this.kemasanTelur);
+        double jmlEsBatu = Math.ceil(this.esBatu/this.kemasanEsBatu);
+        
+        System.out.println("Jumlah kemasan yang perlu dibeli");
+        System.out.println("Tepung Terigu   "+ +jmlTepungTerigu);
+        System.out.println("Gula Pasir      "+ + jmlGulaPasir);
+        System.out.println("Butter          "+ + jmlButter);
+        System.out.println("Ragi            "+ + jmlRagi);
+        System.out.println("Susu Bubuk      "+ + jmlSusuBubuk);
+        System.out.println("Susu Cair       "+ + jmlSusuCair);
+        System.out.println("Telur           "+ + jmlTelur);
+        System.out.println("Es Batu         "+ + jmlEsBatu);
+    }
 }

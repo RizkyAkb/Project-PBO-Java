@@ -76,7 +76,8 @@ public class ProjectUAS {
                 double jumlahPesan = input.nextDouble();
                 if(pesan == 1){
                     HitungBahanManis hbm = new HitungBahanManis();
-                    System.out.println(hbm.hitungHargaPerKemasan(jumlahPesan));                    
+                    System.out.println(hbm.hitungBeratBahan(jumlahPesan)); 
+                    hbm.jumlahBahanYangDibeli();
                 }
                 else if (pesan == 2){
                     
@@ -85,15 +86,15 @@ public class ProjectUAS {
                     
                 }                
                 else if (pesan == 4){
-                    HitungBahanTawar hbt = new HitungBahanTawar();
-                    System.out.println(hbt.hitungHargaPerKemasan(jumlahPesan));
+//                    HitungBahanTawar hbt = new HitungBahanTawar();
+//                    System.out.println(hbt.hitungHargaPerKemasan(jumlahPesan));
                 }
                 else if (pesan == 5){
                     
                 }
                 else if (pesan == 6){
-                    HitungBahanPizza hbp = new HitungBahanPizza();
-                    System.out.println(hbp.hitungHargaPerKemasan(jumlahPesan));
+//                    HitungBahanPizza hbp = new HitungBahanPizza();
+//                    System.out.println(hbp.hitungHargaPerKemasan(jumlahPesan));
                 }            
                 break;
             

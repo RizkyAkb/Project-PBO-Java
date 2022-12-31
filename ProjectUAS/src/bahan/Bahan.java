@@ -18,8 +18,24 @@ double susuBubuk;
 double susuCair;
 double telur;
 double esBatu;
+double kemasanTepungTerigu = 1000;
+double kemasanGulaPasir = 1000;
+double kemasanButter = 500;
+double kemasanRagi = 11;
+double kemasanSusuBubuk = 1000;
+double kemasanSusuCair = 1000;
+double kemasanTelur = 1000;
+double kemasanEsBatu = 1000;
+double hargaTepungTerigu = 40000;
+double hargaGulaPasir = 25000;
+double hargaButter = 23000;
+double hargaRagi = 5000;
+double hargaSusuBubuk = 39000;
+double hargaSusuCair = 24000;
+double hargaTelur = 23000;
+double hargaEsBatu = 2000;
 
-public abstract double[] hitungHargaPerKemasan(double jumlahPesan);
+public abstract double hitungBeratBahan(double jumlahPesan);
 //public abstract double hitungTotalHargaBahan();
 
 

@@ -12,7 +12,7 @@ public class HitungBahanPizza extends Bahan{
     double beratSatuan = 190.0;
     double beratTotal = 1950.0;
     @Override
-    public double hitungHargaPerKemasan(double jumlahPesan) {
+    public double hitungBeratBahan(double jumlahPesan) {
         this.tepungTerigu = (1000  / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
         this.gulaPasir = (100 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
         this.butter = (100 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
@@ -22,6 +22,9 @@ public class HitungBahanPizza extends Bahan{
         this.telur = (50 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
         this.esBatu = (300 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;            
         
+//        double[] beratDough = {this.tepungTerigu, this.gulaPasir , this.butter , 
+//                this.ragi , this.susuBubuk , this.susuCair , this.telur 
+//                , this.esBatu}; 
         double totalBeratDough = this.tepungTerigu + this.gulaPasir + this.butter + 
                 this.ragi + this.susuBubuk + this.susuCair + this.telur 
                 + this.esBatu;

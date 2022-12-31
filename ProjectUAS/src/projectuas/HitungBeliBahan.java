@@ -9,12 +9,5 @@ package projectuas;
  * @author CoolFace
  */
 public class HitungBeliBahan {
-    double tepungTerigu;
-    double gulaPasir;
-    double butter;
-    double ragi;
-    double susuBubuk;
-    double susuCair;
-    double telur;
-    double esBatu;
+  
 }
