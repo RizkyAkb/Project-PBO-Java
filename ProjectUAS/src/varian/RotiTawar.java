@@ -8,7 +8,7 @@ import bahan.*;
  *
  * @author athrees
  */
-public abstract class RotiTawar extends HitungBahanTawar implements Varian1, Varian2{
+public class RotiTawar extends HitungBahanTawar implements Varian1, Varian2{
 //    HitungBahanTawar rotitawar = new HitungBahanTawar();
     double keju;
     double coklat;
@@ -30,6 +30,7 @@ public abstract class RotiTawar extends HitungBahanTawar implements Varian1, Var
         System.out.println("Varian         Berat diperlukan     Jumlah Kemasan");
     }
     
+    @Override
     public double varian2(double jumlahPesan) {
         this.jumlahPesan = jumlahPesan;
         this.hitungBeratBahan(jumlahPesan);

@@ -8,6 +8,7 @@ import bahan.HitungBahanManis;
 import bahan.HitungBahanPizza;
 import bahan.HitungBahanTawar;
 import java.util.Scanner;
+import varian.Pizza;
 import varian.RotiManis;
 import varian.RotiTawar;
 
@@ -99,17 +100,17 @@ public class ProjectUAS {
                     hbt.tampilBahan();
                     System.out.println("Harga satuan : " + rt.varian1(jumlahPesan));
                 } else if (pesan == 5) {
-                    HitungBahanManis hbm = new HitungBahanManis();
-                    RotiManis rm = new RotiManis();
-                    hbm.hitungBeratBahan(jumlahPesan);
-                    hbm.tampilBahan();
-                    System.out.println("Harga satuan : " + rm.varian1(jumlahPesan));
+                    HitungBahanTawar hbt = new HitungBahanTawar();
+                    RotiTawar rt = new RotiTawar();
+                    hbt.hitungBeratBahan(jumlahPesan);
+                    hbt.tampilBahan();
+                    System.out.println("Harga satuan : " + rt.varian2(jumlahPesan));
                 } else if (pesan == 6) {
-                    HitungBahanManis hbm = new HitungBahanManis();
-                    RotiManis rm = new RotiManis();
-                    hbm.hitungBeratBahan(jumlahPesan);
-                    hbm.tampilBahan();
-                    System.out.println("Harga satuan : " + rm.varian1(jumlahPesan));
+                    HitungBahanPizza hbp = new HitungBahanPizza();
+                    Pizza p = new Pizza();
+                    hbp.hitungBeratBahan(jumlahPesan);
+                    hbp.tampilBahan();
+                    System.out.println("Harga satuan : " + p.varian1(jumlahPesan));
                 } else {
                     System.out.println("Pilihan tidak tersedia");
                 }
