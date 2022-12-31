@@ -27,7 +27,7 @@ public class RotiManis extends HitungBahanManis implements Varian1,Varian2, Vari
 //    double hargaSosis;
     
     @Override
-    public double Varian1(double jumlahPesan) {
+    public double varian1(double jumlahPesan) {
         this.hitungBeratBahan(jumlahPesan);
         this.keju = Math.ceil(5 * jumlahPesan / 250);
         this.coklat = Math.ceil(10 * jumlahPesan / 500);
@@ -36,9 +36,10 @@ public class RotiManis extends HitungBahanManis implements Varian1,Varian2, Vari
         double hargaVarian1 = hrgKeju + hrgCoklat;
         double totalKeuntungan = (hargaVarian1 + this.totalHargaBeli()) + ((hargaVarian1 + this.totalHargaBeli())*(50.0/100.0));
         double hargaSatuan = Math.ceil(totalKeuntungan/jumlahPesan);
-//        return hargaVarian1;
         return hargaSatuan;
     }
+    
+    
 
     @Override
     public double varian2() {

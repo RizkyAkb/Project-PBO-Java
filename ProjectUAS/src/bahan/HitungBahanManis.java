@@ -52,45 +52,36 @@ public class HitungBahanManis extends Bahan{
         double hrgSusuCair = bahan[5] * this.hargaSusuCair;
         double hrgTelur = bahan[6] * this.hargaTelur;
         double hrgEsBatu = bahan[7] * this.hargaEsBatu;        
-        double totalHrgBeli = hrgTepungTerigu + hrgGulaPasir + hrgButter + hrgRagi + hrgSusuBubuk + hrgSusuCair + hrgTelur + hrgEsBatu;
-        
+        double totalHrgBeli = hrgTepungTerigu + hrgGulaPasir + hrgButter + hrgRagi + hrgSusuBubuk + hrgSusuCair + hrgTelur + hrgEsBatu;        
         return totalHrgBeli;
     }
     
-    public void jumlahBahanYangDibeli(){
+    public void tampilBahan(){
         double totalBeratDough = this.tepungTerigu + this.gulaPasir + this.butter + 
                 this.ragi + this.susuBubuk + this.susuCair + this.telur 
                 + this.esBatu;
         
-        double jmlTepungTerigu = Math.ceil(this.tepungTerigu/this.kemasanTepungTerigu);
-        double jmlGulaPasir = Math.ceil(this.gulaPasir/this.kemasanGulaPasir);
-        double jmlButter = Math.ceil(this.butter/this.kemasanButter);
-        double jmlRagi = Math.ceil(this.ragi/this.kemasanRagi);
-        double jmlSusuBubuk = Math.ceil(this.susuBubuk/this.kemasanSusuBubuk);
-        double jmlSusuCair = Math.ceil(this.susuCair/this.kemasanSusuCair);
-        double jmlTelur = Math.ceil(this.telur/this.kemasanTelur);
-        double jmlEsBatu = Math.ceil(this.esBatu/this.kemasanEsBatu);        
+        double bahan[] = jmlBeliKemasan();      
         
-        double hrgTepungTerigu = jmlTepungTerigu * this.hargaTepungTerigu;
-        double hrgGulaPasir = jmlGulaPasir * this.hargaGulaPasir;
-        double hrgButter = jmlButter * this.hargaButter;
-        double hrgRagi = jmlRagi * this.hargaRagi;
-        double hrgSusuBubuk = jmlSusuBubuk * this.hargaSusuBubuk;
-        double hrgSusuCair = jmlSusuCair * this.hargaSusuCair;
-        double hrgTelur = jmlTelur * this.hargaTelur;
-        double hrgEsBatu = jmlEsBatu * this.hargaEsBatu;        
-        double totalHrgBeli = hrgTepungTerigu + hrgGulaPasir + hrgButter + hrgRagi + hrgSusuBubuk + hrgSusuCair + hrgTelur + hrgEsBatu;
+        double hrgTepungTerigu = bahan[0] * this.hargaTepungTerigu;
+        double hrgGulaPasir = bahan[1] * this.hargaGulaPasir;
+        double hrgButter = bahan[2] * this.hargaButter;
+        double hrgRagi = bahan[3] * this.hargaRagi;
+        double hrgSusuBubuk = bahan[4] * this.hargaSusuBubuk;
+        double hrgSusuCair = bahan[5] * this.hargaSusuCair;
+        double hrgTelur = bahan[6] * this.hargaTelur;
+        double hrgEsBatu = bahan[7] * this.hargaEsBatu;
         
         System.out.println("Bahan              Berat diperlukan     Jumlah Kemasan");
-        System.out.println("Tepung Terigu   "+ this.tepungTerigu + "    " +jmlTepungTerigu  + "    " + hrgTepungTerigu);
-        System.out.println("Gula Pasir      "+ this.gulaPasir +    "    " + jmlGulaPasir + "    " + hrgGulaPasir);
-        System.out.println("Butter          "+ this.butter + "    " + jmlButter + "    " + hrgButter);
-        System.out.println("Ragi            "+ this.ragi + "    " + jmlRagi + "    " + hrgRagi);
-        System.out.println("Susu Bubuk      "+ this.susuBubuk + "    " + jmlSusuBubuk + "    " + hrgSusuBubuk);
-        System.out.println("Susu Cair       "+ this.susuCair + "    " + jmlSusuCair + "    " + hrgSusuCair);
-        System.out.println("Telur           "+ this.telur + "    " + jmlTelur + "    " + hrgTelur);
-        System.out.println("Es Batu         "+ this.esBatu + "    " + jmlEsBatu + "    " + hrgEsBatu);
+        System.out.println("Tepung Terigu   "+ this.tepungTerigu + "    " +bahan[0]  + "    " + hrgTepungTerigu);
+        System.out.println("Gula Pasir      "+ this.gulaPasir +    "    " + bahan[1] + "    " + hrgGulaPasir);
+        System.out.println("Butter          "+ this.butter + "    " + bahan[2] + "    " + hrgButter);
+        System.out.println("Ragi            "+ this.ragi + "    " + bahan[3] + "    " + hrgRagi);
+        System.out.println("Susu Bubuk      "+ this.susuBubuk + "    " + bahan[4] + "    " + hrgSusuBubuk);
+        System.out.println("Susu Cair       "+ this.susuCair + "    " + bahan[5] + "    " + hrgSusuCair);
+        System.out.println("Telur           "+ this.telur + "    " + bahan[6] + "    " + hrgTelur);
+        System.out.println("Es Batu         "+ this.esBatu + "    " + bahan[7] + "    " + hrgEsBatu);
         System.out.println("========================================================================================");
-        System.out.println("Total           "+ totalBeratDough + "   " + totalHrgBeli);
+        System.out.println("Total           "+ totalBeratDough + "   " + totalHargaBeli());
     }
 }

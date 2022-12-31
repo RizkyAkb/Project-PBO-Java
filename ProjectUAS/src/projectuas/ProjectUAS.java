@@ -79,8 +79,8 @@ public class ProjectUAS {
                     HitungBahanManis hbm = new HitungBahanManis();
                     RotiManis rm = new RotiManis();
                     hbm.hitungBeratBahan(jumlahPesan); 
-                    hbm.jumlahBahanYangDibeli();                    
-                    System.out.println("Harga satuan : " + rm.Varian1(jumlahPesan));
+                    hbm.tampilBahan();                    
+                    System.out.println("Harga satuan : " + rm.varian1(jumlahPesan));
                 }
                 else if (pesan == 2){
                     

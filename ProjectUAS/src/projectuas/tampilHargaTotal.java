@@ -8,6 +8,6 @@ package projectuas;
  *
  * @author CoolFace
  */
-public class HitungBeliBahan {
+public class tampilHargaTotal {
   
 }
