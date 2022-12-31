@@ -15,6 +15,7 @@ public class RotiManis extends HitungBahanManis implements Varian1,Varian2, Vari
     double krim;
     double selai;
     double sosis;
+    double jumlahPesan;
 //    double kemasanKeju;
 //    double kemasanCoklat;
 //    double kemasanKrim;
@@ -28,6 +29,7 @@ public class RotiManis extends HitungBahanManis implements Varian1,Varian2, Vari
     
     @Override
     public double varian1(double jumlahPesan) {
+        this.jumlahPesan = jumlahPesan;
         this.hitungBeratBahan(jumlahPesan);
         this.keju = Math.ceil(5 * jumlahPesan / 250);
         this.coklat = Math.ceil(10 * jumlahPesan / 500);
@@ -40,7 +42,14 @@ public class RotiManis extends HitungBahanManis implements Varian1,Varian2, Vari
     }
     
     
-
+    public void tampilVarian1(){
+        System.out.println("Varian         Berat diperlukan     Jumlah Kemasan");
+        System.out.println("Keju          " + this.keju + "     " + );
+        System.out.println("Coklat        " + this.coklat + "    " +);        
+        System.out.println("========================================================================================");
+        System.out.println("Total           "+);
+    }
+    
     @Override
     public double varian2() {
         this.selai = 10 * (25000/500);
