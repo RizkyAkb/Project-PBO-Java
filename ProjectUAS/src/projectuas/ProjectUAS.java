@@ -22,107 +22,116 @@ public class ProjectUAS {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("TOKO ROTI PAK RAYY");
-        System.out.println("===================");
-        System.out.println("1. Menu");
-        System.out.println("2. Pesanan");
-        System.out.println("5. Exit");
-        System.out.println("===================");
-        System.out.print("Pilihan : ");
-        Scanner input = new Scanner(System.in);
-        int mainmenu = input.nextInt();
+        boolean main = false;
+        while (!main) {
+            System.out.println("TOKO ROTI PAK RAYY");
+            System.out.println("===================");
+            System.out.println("1. Menu");
+            System.out.println("2. Pesanan");
+            System.out.println("5. Exit");
+            System.out.println("===================");
+            System.out.print("Pilihan : ");
+            Scanner input = new Scanner(System.in);
+            int mainmenu = input.nextInt();
 
-        switch (mainmenu) {
-            // Menu Toko Roti Pak Rayyyy
-            case 1:
-                System.out.println("1. Roti Manis");
-                System.out.println("   a. Varian 1");
-                System.out.println("      - Filling = Keju, Coklat");
-                System.out.println("      - Topping  = Coklat");
+            switch (mainmenu) {
+                case 1:
+                    // Menu Toko Roti Pak Rayyyy
+                    System.out.println("1. Roti Manis");
+                    System.out.println("   a. Varian 1");
+                    System.out.println("      - Filling = Keju, Coklat");
+                    System.out.println("      - Topping  = Coklat");
 
-                System.out.println("   b. Varian 2");
-                System.out.println("      - Filling = Red Beans");
-                System.out.println("      - Topping  = Krim Vanilla");
+                    System.out.println("   b. Varian 2");
+                    System.out.println("      - Filling = Red Beans");
+                    System.out.println("      - Topping  = Krim Vanilla");
 
-                System.out.println("   c. Varian 3");
-                System.out.println("      - Filling = Keju, Sosis");
+                    System.out.println("   c. Varian 3");
+                    System.out.println("      - Filling = Keju, Sosis");
 
-                System.out.println("2. Roti Tawar");
-                System.out.println("   a. Varian 1");
-                System.out.println("      - Filling = Coklat");
+                    System.out.println("2. Roti Tawar");
+                    System.out.println("   a. Varian 1");
+                    System.out.println("      - Filling = Coklat");
 
-                System.out.println("   b. Varian 2");
-                System.out.println("      - Filling = Keju");
+                    System.out.println("   b. Varian 2");
+                    System.out.println("      - Filling = Keju");
 
-                System.out.println("3. Pizza");
-                System.out.println("   a. Varian 1");
-                System.out.println("      - Topping = Keju, Sosis, Smoked Beef, Bawang Bombay");
-                System.out.println("===========================================================");
-                break;
+                    System.out.println("3. Pizza");
+                    System.out.println("   a. Varian 1");
+                    System.out.println("      - Topping = Keju, Sosis, Smoked Beef, Bawang Bombay");
+                    System.out.println("===========================================================");
+                    System.out.println("1.Kembali 2.Keluar");
+                    int pilihMenu = input.nextInt();
+                    if (pilihMenu == 1) {
+                        main = false;
+                    } else if (pilihMenu == 2) {
+                        System.exit(0);
+                    }
+                    break;
 
-            case 2:
-                // Pesanan
-                System.out.println("=======================");
-                System.out.println("Silahkan Pilih Menu");
-                System.out.println("=======================");
-                System.out.println("1. Roti Manis Varian 1");
-                System.out.println("2. Roti Manis Varian 2");
-                System.out.println("3. Roti Manis Varian 3");
-                System.out.println("4. Roti Tawar Varian 1");
-                System.out.println("5. Roti Tawar Varian 2");
-                System.out.println("6. Pizza Varian 1");
-                System.out.print("Pilih Menu : ");
-                int pesan = input.nextInt();
-                System.out.print("Pilih Jumlah : ");
-                double jumlahPesan = input.nextDouble();
-                if (pesan == 1) {
-                    HitungBahanManis hbm = new HitungBahanManis();
-                    RotiManis rm = new RotiManis();
-                    hbm.hitungBeratBahan(jumlahPesan);
-                    hbm.tampilBahan();
-                    System.out.println("Harga satuan : " + rm.varian1(jumlahPesan));
-                } else if (pesan == 2) {
-                    HitungBahanManis hbm = new HitungBahanManis();
-                    RotiManis rm = new RotiManis();
-                    hbm.hitungBeratBahan(jumlahPesan);
-                    hbm.tampilBahan();
-                    System.out.println("Harga satuan : " + rm.varian2(jumlahPesan));
-                } else if (pesan == 3) {
-                    HitungBahanManis hbm = new HitungBahanManis();
-                    RotiManis rm = new RotiManis();
-                    hbm.hitungBeratBahan(jumlahPesan);
-                    hbm.tampilBahan();
-                    System.out.println("Harga satuan : " + rm.varian3(jumlahPesan));
-                } else if (pesan == 4) {
-                    HitungBahanTawar hbt = new HitungBahanTawar();
-                    RotiTawar rt = new RotiTawar();
-                    hbt.hitungBeratBahan(jumlahPesan);
-                    hbt.tampilBahan();
-                    System.out.println("Harga satuan : " + rt.varian1(jumlahPesan));
-                } else if (pesan == 5) {
-                    HitungBahanTawar hbt = new HitungBahanTawar();
-                    RotiTawar rt = new RotiTawar();
-                    hbt.hitungBeratBahan(jumlahPesan);
-                    hbt.tampilBahan();
-                    System.out.println("Harga satuan : " + rt.varian2(jumlahPesan));
-                } else if (pesan == 6) {
-                    HitungBahanPizza hbp = new HitungBahanPizza();
-                    Pizza p = new Pizza();
-                    hbp.hitungBeratBahan(jumlahPesan);
-                    hbp.tampilBahan();
-                    System.out.println("Harga satuan : " + p.varian1(jumlahPesan));
-                } else {
-                    System.out.println("Pilihan tidak tersedia");
-                }
-                break;
+                case 2:
+                    // Pesanan
+                    System.out.println("=======================");
+                    System.out.println("Silahkan Pilih Menu");
+                    System.out.println("=======================");
+                    System.out.println("1. Roti Manis Varian 1");
+                    System.out.println("2. Roti Manis Varian 2");
+                    System.out.println("3. Roti Manis Varian 3");
+                    System.out.println("4. Roti Tawar Varian 1");
+                    System.out.println("5. Roti Tawar Varian 2");
+                    System.out.println("6. Pizza Varian 1");
+                    System.out.print("Pilih Menu : ");
+                    int pesan = input.nextInt();
+                    System.out.print("Pilih Jumlah : ");
+                    double jumlahPesan = input.nextDouble();
+                    if (pesan == 1) {
+//                    HitungBahanManis hbm = new HitungBahanManis();                    
+//                    hbm.hitungBeratBahan(jumlahPesan);
+//                    hbm.tampilBahan();
+                        RotiManis rm = new RotiManis();
+                        System.out.println("Harga satuan : " + rm.varian1(jumlahPesan));
+                    } else if (pesan == 2) {
+                        HitungBahanManis hbm = new HitungBahanManis();
+                        hbm.hitungBeratBahan(jumlahPesan);
+                        hbm.tampilBahan();
+                        RotiManis rm = new RotiManis();
+                        System.out.println("Harga satuan : " + rm.varian2(jumlahPesan));
+                    } else if (pesan == 3) {
+                        HitungBahanManis hbm = new HitungBahanManis();
+                        hbm.hitungBeratBahan(jumlahPesan);
+                        hbm.tampilBahan();
+                        RotiManis rm = new RotiManis();
+                        System.out.println("Harga satuan : " + rm.varian3(jumlahPesan));
+                    } else if (pesan == 4) {
+                        HitungBahanTawar hbt = new HitungBahanTawar();
+                        hbt.hitungBeratBahan(jumlahPesan);
+                        hbt.tampilBahan();
+                        RotiTawar rt = new RotiTawar();
+                        System.out.println("Harga satuan : " + rt.varian1(jumlahPesan));
+                    } else if (pesan == 5) {
+                        HitungBahanTawar hbt = new HitungBahanTawar();
+                        hbt.hitungBeratBahan(jumlahPesan);
+                        hbt.tampilBahan();
+                        RotiTawar rt = new RotiTawar();
+                        System.out.println("Harga satuan : " + rt.varian2(jumlahPesan));
+                    } else if (pesan == 6) {
+                        HitungBahanPizza hbp = new HitungBahanPizza();
+                        hbp.hitungBeratBahan(jumlahPesan);
+                        hbp.tampilBahan();
+                        Pizza p = new Pizza();
+                        System.out.println("Harga satuan : " + p.varian1(jumlahPesan));
+                    } else {
+                        System.out.println("Pilihan tidak tersedia");
+                    }
+                    break;
+                case 3:
+                    System.exit(0);
+                default:
+                    System.out.println("Pilihan Anda tidak tersedia!!");
 
-            // EXIT
+            }
         }
 
-//        HitungBahanManis hb = new HitungBahanManis();
-//        ManisperKemasan = (Math.ceil(hb));
-//       System.out.println("Harga roti manis per kemasan: Rp "+
-//              (hb.hitungHargaPerPcs()));
     }
 
 }

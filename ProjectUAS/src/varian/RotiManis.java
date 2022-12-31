@@ -30,7 +30,8 @@ public class RotiManis extends HitungBahanManis implements Varian1,Varian2, Vari
     @Override
     public double varian1(double jumlahPesan) {
         this.jumlahPesan = jumlahPesan;
-        this.hitungBeratBahan(jumlahPesan);
+        hitungBeratBahan(jumlahPesan);
+        tampilBahan();
         this.keju = Math.ceil(5 * jumlahPesan / 250);
         this.coklat = Math.ceil(10 * jumlahPesan / 500);
         double hrgKeju = this.keju * 31000;
@@ -53,7 +54,7 @@ public class RotiManis extends HitungBahanManis implements Varian1,Varian2, Vari
     @Override
     public double varian2(double jumlahPesan) {
         this.jumlahPesan = jumlahPesan;
-        this.hitungBeratBahan(jumlahPesan);
+        hitungBeratBahan(jumlahPesan);
         this.selai = Math.ceil(10 * jumlahPesan/500);
         this.krim = Math.ceil(5 *  jumlahPesan/ 500);
         double hrgSelai = this.keju * 25000;
@@ -67,7 +68,7 @@ public class RotiManis extends HitungBahanManis implements Varian1,Varian2, Vari
     @Override
     public double varian3(double jumlahPesan) {
         this.jumlahPesan = jumlahPesan;
-        this.hitungBeratBahan(jumlahPesan);
+        hitungBeratBahan(jumlahPesan);
         this.keju = Math.ceil(10 * jumlahPesan/250);
         this.sosis = Math.ceil(10 *  jumlahPesan/ 1000);
         double hrgKeju = this.keju * 25000;
