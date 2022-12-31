@@ -8,6 +8,7 @@ import bahan.HitungBahanManis;
 import bahan.HitungBahanPizza;
 import bahan.HitungBahanTawar;
 import java.util.Scanner;
+import varian.RotiManis;
 
 /**
  *
@@ -78,6 +79,8 @@ public class ProjectUAS {
                     HitungBahanManis hbm = new HitungBahanManis();
                     System.out.println(hbm.hitungBeratBahan(jumlahPesan)); 
                     hbm.jumlahBahanYangDibeli();
+                    RotiManis rm = new RotiManis();
+                    System.out.println("Harga satuan : " + rm.Varian1());
                 }
                 else if (pesan == 2){
                     

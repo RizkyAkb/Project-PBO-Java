@@ -22,15 +22,41 @@ public class HitungBahanManis extends Bahan{
         this.telur = (80 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
         this.esBatu = (400 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;              
         
-//        double[] beratDough = {this.tepungTerigu, this.gulaPasir , this.butter , 
-//                this.ragi , this.susuBubuk , this.susuCair , this.telur 
-//                , this.esBatu}; 
         double totalBeratDough = this.tepungTerigu + this.gulaPasir + this.butter + 
                 this.ragi + this.susuBubuk + this.susuCair + this.telur 
                 + this.esBatu;
         return totalBeratDough;        
     }
-
+    
+    
+    public double[] jmlBeliKemasan(){
+        double jmlTepungTerigu = Math.ceil(this.tepungTerigu/this.kemasanTepungTerigu);
+        double jmlGulaPasir = Math.ceil(this.gulaPasir/this.kemasanGulaPasir);
+        double jmlButter = Math.ceil(this.butter/this.kemasanButter);
+        double jmlRagi = Math.ceil(this.ragi/this.kemasanRagi);
+        double jmlSusuBubuk = Math.ceil(this.susuBubuk/this.kemasanSusuBubuk);
+        double jmlSusuCair = Math.ceil(this.susuCair/this.kemasanSusuCair);
+        double jmlTelur = Math.ceil(this.telur/this.kemasanTelur);
+        double jmlEsBatu = Math.ceil(this.esBatu/this.kemasanEsBatu);
+        double[] jmlBeliKemasan = {jmlTepungTerigu, jmlGulaPasir, jmlButter, jmlRagi, jmlSusuBubuk, jmlSusuCair, jmlTelur, jmlEsBatu};
+        return jmlBeliKemasan;
+    }
+    
+    public double totalHargaBeli(){
+        double bahan[] = jmlBeliKemasan();
+        double hrgTepungTerigu = bahan[0] * this.hargaTepungTerigu;
+        double hrgGulaPasir = bahan[1] * this.hargaGulaPasir;
+        double hrgButter = bahan[2] * this.hargaButter;
+        double hrgRagi = bahan[3] * this.hargaRagi;
+        double hrgSusuBubuk = bahan[4] * this.hargaSusuBubuk;
+        double hrgSusuCair = bahan[5] * this.hargaSusuCair;
+        double hrgTelur = bahan[6] * this.hargaTelur;
+        double hrgEsBatu = bahan[7] * this.hargaEsBatu;        
+        double totalHrgBeli = hrgTepungTerigu + hrgGulaPasir + hrgButter + hrgRagi + hrgSusuBubuk + hrgSusuCair + hrgTelur + hrgEsBatu;
+        
+        return totalHrgBeli;
+    }
+    
     public void jumlahBahanYangDibeli(){
         double totalBeratDough = this.tepungTerigu + this.gulaPasir + this.butter + 
                 this.ragi + this.susuBubuk + this.susuCair + this.telur 
