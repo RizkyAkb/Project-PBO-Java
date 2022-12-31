@@ -11,6 +11,8 @@ package bahan;
 public class HitungBahanManis extends Bahan{
     double beratSatuan = 50.0;
     double beratTotal = 2350.0;
+    
+    //Menghitung total berat bahan
     @Override
     public double hitungBeratBahan(double jumlahPesan) {
         this.tepungTerigu = (1000 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
@@ -28,7 +30,7 @@ public class HitungBahanManis extends Bahan{
         return totalBeratDough;        
     }
     
-    
+    //Menghitung jumlah kemasan yang perlu dibeli untuk masing-masing bahan
     public double[] jmlBeliKemasan(){
         double jmlTepungTerigu = Math.ceil(this.tepungTerigu/this.kemasanTepungTerigu);
         double jmlGulaPasir = Math.ceil(this.gulaPasir/this.kemasanGulaPasir);
@@ -42,6 +44,7 @@ public class HitungBahanManis extends Bahan{
         return jmlBeliKemasan;
     }
     
+    //Menghitung harga yang perlu dibayar untuk bahan yang dibeli
     public double totalHargaBeli(){
         double bahan[] = jmlBeliKemasan();
         double hrgTepungTerigu = bahan[0] * this.hargaTepungTerigu;
@@ -56,6 +59,7 @@ public class HitungBahanManis extends Bahan{
         return totalHrgBeli;
     }
     
+    //Menampilkan tabel bahan
     public void tampilBahan(){
         double totalBeratDough = this.tepungTerigu + this.gulaPasir + this.butter + 
                 this.ragi + this.susuBubuk + this.susuCair + this.telur 
@@ -75,15 +79,15 @@ public class HitungBahanManis extends Bahan{
         System.out.println("===========================================================================");
         System.out.println("Bahan              Berat diperlukan         Jumlah Kemasan          Harga");
         System.out.println("===========================================================================");
-        System.out.println("Tepung Terigu \t\t" + this.tepungTerigu + " gr \t\t" + bahan[0] + "\t\t Rp " + hrgTepungTerigu);
-        System.out.println("Gula Pasir \t\t"    + this.gulaPasir    + " gr \t\t" + bahan[1] + "\t\t Rp " + hrgGulaPasir);
-        System.out.println("Butter \t\t\t"      + this.butter       + " gr \t\t" + bahan[2] + "\t\t Rp " + hrgButter);
-        System.out.println("Ragi \t\t\t"        + this.ragi         + " gr \t\t" + bahan[3] + "\t\t Rp " + hrgRagi);
-        System.out.println("Susu Bubuk \t\t"    + this.susuBubuk    + " gr \t\t" + bahan[4] + "\t\t Rp " + hrgSusuBubuk);
-        System.out.println("Susu Cair \t\t"     + this.susuCair     + " gr \t\t" + bahan[5] + "\t\t Rp " + hrgSusuCair);
-        System.out.println("Telur \t\t\t"       + this.telur        + " gr \t\t" + bahan[6] + "\t\t Rp " + hrgTelur);
-        System.out.println("Es Batu \t\t"       + this.esBatu       + " gr \t\t" + bahan[7] + "\t\t Rp " + hrgEsBatu);
+        System.out.println("Tepung Terigu \t\t" + numberFormat.format(this.tepungTerigu) + " gr \t\t" + bahan[0] + "\t\t Rp " + hrgTepungTerigu);
+        System.out.println("Gula Pasir \t\t"    + numberFormat.format(this.gulaPasir)    + " gr \t\t" + bahan[1] + "\t\t Rp " + hrgGulaPasir);
+        System.out.println("Butter \t\t\t"      + numberFormat.format(this.butter)       + " gr \t\t" + bahan[2] + "\t\t Rp " + hrgButter);
+        System.out.println("Ragi \t\t\t"        + numberFormat.format(this.ragi)         + " gr \t\t" + bahan[3] + "\t\t Rp " + hrgRagi);
+        System.out.println("Susu Bubuk \t\t"    + numberFormat.format(this.susuBubuk)    + " gr \t\t" + bahan[4] + "\t\t Rp " + hrgSusuBubuk);
+        System.out.println("Susu Cair \t\t"     + numberFormat.format(this.susuCair)     + " gr \t\t" + bahan[5] + "\t\t Rp " + hrgSusuCair);
+        System.out.println("Telur \t\t\t"       + numberFormat.format(this.telur)        + " gr \t\t" + bahan[6] + "\t\t Rp " + hrgTelur);
+        System.out.println("Es Batu \t\t"       + numberFormat.format(this.esBatu)       + " gr \t\t" + bahan[7] + "\t\t Rp " + hrgEsBatu);
         System.out.println("===========================================================================");
-        System.out.println("Total \t\t\t"       + totalBeratDough   + "\t\t\t\t\t Rp "      + totalHargaBeli());
+        System.out.println("Total \t\t\t"       + numberFormat.format(totalBeratDough)   + " gr \t\t\t\t Rp "      + totalHargaBeli());
     }
 }

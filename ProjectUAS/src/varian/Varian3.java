@@ -9,5 +9,5 @@ package varian;
  * @author athrees
  */
 public interface Varian3 {
-    double varian3();
+    double varian3(double jumlahPesan);
 }

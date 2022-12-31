@@ -39,8 +39,8 @@ public class Pizza extends HitungBahanPizza implements Varian1{
         System.out.println("Varian         Berat diperlukan     Jumlah Kemasan");
     }
 
-    private double totalHargaBeli(){
-        return 0;
-        
-    }
+//    private double totalHargaBeli(){
+//        return 0;
+//        
+//    }
 }

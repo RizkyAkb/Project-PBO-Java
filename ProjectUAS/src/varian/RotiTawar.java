@@ -45,9 +45,9 @@ public abstract class RotiTawar extends HitungBahanTawar implements Varian1, Var
         System.out.println("Varian         Berat diperlukan     Jumlah Kemasan");
     }
 
-    private double totalHargaBeli() {
-        return 0;
-    }
+//    private double totalHargaBeli() {
+//        return 0;
+//    }
     
 }
 

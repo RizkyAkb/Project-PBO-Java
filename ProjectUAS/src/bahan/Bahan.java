@@ -4,6 +4,8 @@
  */
 package bahan;
 
+import java.text.DecimalFormat;
+
 /**
  *
  * @author RUDI
@@ -35,7 +37,9 @@ double hargaSusuCair = 24000;
 double hargaTelur = 23000;
 double hargaEsBatu = 2000;
 
+DecimalFormat numberFormat = new DecimalFormat("#.00");
 public abstract double hitungBeratBahan(double jumlahPesan);
+
 //public abstract double hitungTotalHargaBahan();
 
 
