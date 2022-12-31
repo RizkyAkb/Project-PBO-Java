@@ -8,23 +8,46 @@ import bahan.*;
  *
  * @author athrees
  */
-public class RotiTawar extends BahanVarian implements Varian2{
-    HitungBahanTawar rotitawar = new HitungBahanTawar();
+public abstract class RotiTawar extends HitungBahanTawar implements Varian1, Varian2{
+//    HitungBahanTawar rotitawar = new HitungBahanTawar();
+    double keju;
+    double coklat;
+    double jumlahPesan;
 
     @Override
-    public double Varian1() {
-        this.coklat = 80 * (29000/500);
-        double hargaVarian1 = this.coklat;
-        double hargaJual = (hargaVarian1 + rotitawar.hitungHargaPerPcs()) + ((hargaVarian1 + rotitawar.hitungHargaPerKemasan())*(50/100));
-        return hargaJual;
+    public double varian1(double jumlahPesan) {
+        this.jumlahPesan = jumlahPesan;
+        this.hitungBeratBahan(jumlahPesan);
+        this.coklat = Math.ceil(80 * jumlahPesan / 500);
+        double hrgCoklat = this.coklat * 29000;
+        double hargaVarian1 = hrgCoklat ;
+        double totalKeuntungan = (hargaVarian1 + this.totalHargaBeli()) + ((hargaVarian1 + this.totalHargaBeli())*(50.0/100.0));
+        double hargaSatuan = Math.ceil(totalKeuntungan/jumlahPesan);
+        return hargaSatuan;
+    }
+    
+    public void tampilVarian1(){
+        System.out.println("Varian         Berat diperlukan     Jumlah Kemasan");
+    }
+    
+    public double varian2(double jumlahPesan) {
+        this.jumlahPesan = jumlahPesan;
+        this.hitungBeratBahan(jumlahPesan);
+        this.keju = Math.ceil(80 * jumlahPesan / 250);
+        double hrgKeju = this.keju * 29000;
+        double hargaVarian1 = hrgKeju ;
+        double totalKeuntungan = (hargaVarian1 + this.totalHargaBeli()) + ((hargaVarian1 + this.totalHargaBeli())*(50.0/100.0));
+        double hargaSatuan = Math.ceil(totalKeuntungan/jumlahPesan);
+        return hargaSatuan;
+    }
+    
+    public void tampilVarian2(){
+        System.out.println("Varian         Berat diperlukan     Jumlah Kemasan");
     }
 
-    @Override
-    public double varian2() {
-        this.keju = 80 * (31000/250);
-        double hargaVarian2 = this.keju;
-        double hargaJual = (hargaVarian2 + rotitawar.hitungHargaPerPcs()) + ((hargaVarian2 + rotitawar.hitungHargaPerKemasan())*(50/100));
-        return hargaJual;
+    private double totalHargaBeli() {
+        return 0;
     }
     
 }
+
