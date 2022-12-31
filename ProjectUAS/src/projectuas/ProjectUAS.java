@@ -77,10 +77,10 @@ public class ProjectUAS {
                 double jumlahPesan = input.nextDouble();
                 if(pesan == 1){
                     HitungBahanManis hbm = new HitungBahanManis();
-                    System.out.println(hbm.hitungBeratBahan(jumlahPesan)); 
-                    hbm.jumlahBahanYangDibeli();
                     RotiManis rm = new RotiManis();
-                    System.out.println("Harga satuan : " + rm.Varian1());
+                    hbm.hitungBeratBahan(jumlahPesan); 
+                    hbm.jumlahBahanYangDibeli();                    
+                    System.out.println("Harga satuan : " + rm.Varian1(jumlahPesan));
                 }
                 else if (pesan == 2){
                     

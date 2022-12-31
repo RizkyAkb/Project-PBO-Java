@@ -15,25 +15,29 @@ public class RotiManis extends HitungBahanManis implements Varian1,Varian2, Vari
     double krim;
     double selai;
     double sosis;
-    double kemasanKeju;
-    double kemasanCoklat;
-    double kemasanKrim;
-    double kemasanSelai;
-    double kemasanSosis;
-    double hargaKeju;
-    double hargaCoklat;
-    double hargaKrim;
-    double hargaSelai;
-    double hargaSosis;
+//    double kemasanKeju;
+//    double kemasanCoklat;
+//    double kemasanKrim;
+//    double kemasanSelai;
+//    double kemasanSosis;
+//    double hargaKeju;
+//    double hargaCoklat;
+//    double hargaKrim;
+//    double hargaSelai;
+//    double hargaSosis;
     
     @Override
-    public double Varian1() {
-        this.keju = 5 * (31000/250);
-        this.coklat = 10 * (29000/500);
-        double hargaVarian1 = this.keju + this.coklat;
-        double hargaJual = (hargaVarian1 + this.totalHargaBeli()) + ((hargaVarian1 + this.totalHargaBeli())*(50/100));
+    public double Varian1(double jumlahPesan) {
+        this.hitungBeratBahan(jumlahPesan);
+        this.keju = Math.ceil(5 * jumlahPesan / 250);
+        this.coklat = Math.ceil(10 * jumlahPesan / 500);
+        double hrgKeju = this.keju * 31000;
+        double hrgCoklat = this.coklat * 29000;        
+        double hargaVarian1 = hrgKeju + hrgCoklat;
+        double totalKeuntungan = (hargaVarian1 + this.totalHargaBeli()) + ((hargaVarian1 + this.totalHargaBeli())*(50.0/100.0));
+        double hargaSatuan = Math.ceil(totalKeuntungan/jumlahPesan);
 //        return hargaVarian1;
-        return hargaJual;
+        return hargaSatuan;
     }
 
     @Override

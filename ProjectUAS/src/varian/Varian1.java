@@ -10,6 +10,6 @@ package varian;
  */
 public interface Varian1 {
 
-    double Varian1();
+    double Varian1(double jumlahPesan);
     
 }

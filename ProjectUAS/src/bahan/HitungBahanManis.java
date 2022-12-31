@@ -82,14 +82,14 @@ public class HitungBahanManis extends Bahan{
         double totalHrgBeli = hrgTepungTerigu + hrgGulaPasir + hrgButter + hrgRagi + hrgSusuBubuk + hrgSusuCair + hrgTelur + hrgEsBatu;
         
         System.out.println("Bahan              Berat diperlukan     Jumlah Kemasan");
-        System.out.println("Tepung Terigu   "+ this.tepungTerigu + "    " +jmlTepungTerigu  + " " + hrgTepungTerigu);
-        System.out.println("Gula Pasir      "+ this.gulaPasir + "       " + jmlGulaPasir + " " + hrgGulaPasir);
-        System.out.println("Butter          "+ this.butter + "          " + jmlButter + " " + hrgButter);
-        System.out.println("Ragi            "+ this.ragi + "    " + jmlRagi + " " + hrgRagi);
-        System.out.println("Susu Bubuk      "+ this.susuBubuk + "   " + jmlSusuBubuk + " " + hrgSusuBubuk);
-        System.out.println("Susu Cair       "+ this.susuCair + "    " + jmlSusuCair + " " + hrgSusuCair);
-        System.out.println("Telur           "+ this.telur + "   " + jmlTelur + " " + hrgTelur);
-        System.out.println("Es Batu         "+ this.esBatu + "  " + jmlEsBatu + " " + hrgEsBatu);
+        System.out.println("Tepung Terigu   "+ this.tepungTerigu + "    " +jmlTepungTerigu  + "    " + hrgTepungTerigu);
+        System.out.println("Gula Pasir      "+ this.gulaPasir +    "    " + jmlGulaPasir + "    " + hrgGulaPasir);
+        System.out.println("Butter          "+ this.butter + "    " + jmlButter + "    " + hrgButter);
+        System.out.println("Ragi            "+ this.ragi + "    " + jmlRagi + "    " + hrgRagi);
+        System.out.println("Susu Bubuk      "+ this.susuBubuk + "    " + jmlSusuBubuk + "    " + hrgSusuBubuk);
+        System.out.println("Susu Cair       "+ this.susuCair + "    " + jmlSusuCair + "    " + hrgSusuCair);
+        System.out.println("Telur           "+ this.telur + "    " + jmlTelur + "    " + hrgTelur);
+        System.out.println("Es Batu         "+ this.esBatu + "    " + jmlEsBatu + "    " + hrgEsBatu);
         System.out.println("========================================================================================");
         System.out.println("Total           "+ totalBeratDough + "   " + totalHrgBeli);
     }
