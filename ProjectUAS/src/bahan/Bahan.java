@@ -10,37 +10,35 @@ import java.text.DecimalFormat;
  *
  * @author RUDI
  */
-
 public abstract class Bahan {
-double tepungTerigu;
-double gulaPasir;
-double butter;
-double ragi;
-double susuBubuk;
-double susuCair;
-double telur;
-double esBatu;
-double kemasanTepungTerigu = 1000;
-double kemasanGulaPasir = 1000;
-double kemasanButter = 500;
-double kemasanRagi = 11;
-double kemasanSusuBubuk = 1000;
-double kemasanSusuCair = 1000;
-double kemasanTelur = 1000;
-double kemasanEsBatu = 1000;
-double hargaTepungTerigu = 40000;
-double hargaGulaPasir = 25000;
-double hargaButter = 23000;
-double hargaRagi = 5000;
-double hargaSusuBubuk = 39000;
-double hargaSusuCair = 24000;
-double hargaTelur = 23000;
-double hargaEsBatu = 2000;
 
-DecimalFormat numberFormat = new DecimalFormat("#.00");
-public abstract double hitungBeratBahan(double jumlahPesan);
+    double tepungTerigu, gulaPasir, butter, ragi, susuBubuk, susuCair, telur, esBatu;
+    double kemasanTepungTerigu = 1000,
+            kemasanGulaPasir = 1000,
+            kemasanButter = 500,
+            kemasanRagi = 11,
+            kemasanSusuBubuk = 1000,
+            kemasanSusuCair = 1000,
+            kemasanTelur = 1000,
+            kemasanEsBatu = 1000;
+    double hargaTepungTerigu = 40000,
+            hargaGulaPasir = 25000,
+            hargaButter = 23000,
+            hargaRagi = 5000,
+            hargaSusuBubuk = 39000,
+            hargaSusuCair = 24000,
+            hargaTelur = 23000,
+            hargaEsBatu = 2000;
+    double hrgTepungTerigu, hrgGulaPasir, hrgButter, hrgRagi, hrgSusuBubuk, hrgSusuCair, hrgTelur, hrgEsBatu;
+    double totalBeratDough;
 
-//public abstract double hitungTotalHargaBahan();
+    DecimalFormat numberFormat = new DecimalFormat("#.00");
 
+    public abstract double hitungBeratBahan(double jumlahPesan);
 
+    public abstract void hitungHargaBahan();
+
+    public abstract double totalHargaBeli();
+
+    public abstract void tampilBahan();
 }

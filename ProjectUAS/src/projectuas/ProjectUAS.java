@@ -28,7 +28,7 @@ public class ProjectUAS {
             System.out.println("===================");
             System.out.println("1. Menu");
             System.out.println("2. Pesanan");
-            System.out.println("5. Exit");
+            System.out.println("3. Exit");
             System.out.println("===================");
             System.out.print("Pilihan : ");
             Scanner input = new Scanner(System.in);
@@ -61,6 +61,7 @@ public class ProjectUAS {
                     System.out.println("      - Topping = Keju, Sosis, Smoked Beef, Bawang Bombay");
                     System.out.println("===========================================================");
                     System.out.println("1.Kembali 2.Keluar");
+                    System.out.print("Pilihan : ");
                     int pilihMenu = input.nextInt();
                     if (pilihMenu == 1) {
                         main = false;
