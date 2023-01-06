@@ -10,45 +10,56 @@ import bahan.*;
  */
 public class RotiTawar extends HitungBahanTawar implements Varian1, Varian2{
 //    HitungBahanTawar rotitawar = new HitungBahanTawar();
-    double keju;
-    double coklat;
-    double jumlahPesan;
 
-    @Override
-    public double varian1(double jumlahPesan) {
-        this.jumlahPesan = jumlahPesan;
-        this.hitungBeratBahan(jumlahPesan);
-        this.coklat = Math.ceil(80 * jumlahPesan / 500);
-        double hrgCoklat = this.coklat * 29000;
-        double hargaVarian1 = hrgCoklat ;
-        double totalKeuntungan = (hargaVarian1 + this.totalHargaBeli()) + ((hargaVarian1 + this.totalHargaBeli())*(50.0/100.0));
-        double hargaSatuan = Math.ceil(totalKeuntungan/jumlahPesan);
-        return hargaSatuan;
+    public void varian1(int jumlahPesan) {
+        hitungBeratBahan(jumlahPesan);
+        hitungHargaBahan();
+        tampilBahan();                
+        this.coklat = 80 * jumlahPesan;
+        double hrgCoklat = this.coklat /this.kemasanCoklat * this.hargaCoklat;        
+        double hargaVarian1 = hrgCoklat;
+        double totalKeuntungan = (hargaVarian1 + totalHargaBeli()) + ((hargaVarian1 + totalHargaBeli())*(50.0/100.0));
+        double hargaSatuan = Math.ceil(totalKeuntungan/jumlahPesan);    
+        
+        System.out.println("=======");
+        System.out.println("VARIAN");
+        System.out.println("===========================================================================");
+        System.out.println("Bahan           Berat diperlukan              Harga");
+        System.out.println("===========================================================================");
+        System.out.println("Coklat \t\t" + numberFormat.format(this.coklat) + " gr " + "\t\t Rp " + numberFormat.format(hrgCoklat));        
+        System.out.println("===========================================================================");
+        System.out.println("Total \t\t\t" + "  \t\t Rp " + numberFormat.format(hargaVarian1)); 
+        System.out.println("Modal Rp " + numberFormat.format(hargaVarian1 + totalHargaBeli()));
+        System.out.println("Total Keuntungan Rp " + numberFormat.format(totalKeuntungan));
+        System.out.println("Harga satuan roti Rp " + hargaSatuan );          
+        System.out.println(" ");
     }
     
-    public void tampilVarian1(){
-        System.out.println("Varian         Berat diperlukan     Jumlah Kemasan");
+    public void varian2(int jumlahPesan) {
+        hitungBeratBahan(jumlahPesan);
+        hitungHargaBahan();
+        tampilBahan();                
+        this.keju = 80 * jumlahPesan;
+        double hrgKeju = this.keju / this.kemasanKeju * this.hargaKeju;
+        double hargaVarian2 = hrgKeju;
+        double totalKeuntungan = (hargaVarian2 + totalHargaBeli()) + ((hargaVarian2 + totalHargaBeli())*(50.0/100.0));
+        double hargaSatuan = Math.ceil(totalKeuntungan/jumlahPesan);    
+        
+        System.out.println("=======");
+        System.out.println("VARIAN");
+        System.out.println("===========================================================================");
+        System.out.println("Bahan           Berat diperlukan              Harga");
+        System.out.println("===========================================================================");
+        System.out.println("Keju \t\t" + numberFormat.format(this.keju) + " gr " + "\t\t Rp " + numberFormat.format(hrgKeju));
+        System.out.println("===========================================================================");
+        System.out.println("Total \t\t\t" + "  \t\t Rp " + numberFormat.format(hargaVarian2)); 
+        System.out.println("Modal Rp " + numberFormat.format(hargaVarian2 + totalHargaBeli()));
+        System.out.println("Total Keuntungan Rp " + numberFormat.format(totalKeuntungan));
+        System.out.println("Harga satuan roti Rp " + hargaSatuan );          
+        System.out.println(" ");
     }
     
-    @Override
-    public double varian2(double jumlahPesan) {
-        this.jumlahPesan = jumlahPesan;
-        this.hitungBeratBahan(jumlahPesan);
-        this.keju = Math.ceil(80 * jumlahPesan / 250);
-        double hrgKeju = this.keju * 29000;
-        double hargaVarian1 = hrgKeju ;
-        double totalKeuntungan = (hargaVarian1 + this.totalHargaBeli()) + ((hargaVarian1 + this.totalHargaBeli())*(50.0/100.0));
-        double hargaSatuan = Math.ceil(totalKeuntungan/jumlahPesan);
-        return hargaSatuan;
-    }
     
-    public void tampilVarian2(){
-        System.out.println("Varian         Berat diperlukan     Jumlah Kemasan");
-    }
-
-//    private double totalHargaBeli() {
-//        return 0;
-//    }
     
 }
 
