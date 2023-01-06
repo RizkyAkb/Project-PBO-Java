@@ -14,7 +14,7 @@ public class HitungBahanPizza extends Bahan{
     
     // Menghitung total berat bahan
     @Override
-    public double hitungBeratBahan(double jumlahPesan) {
+    public double hitungBeratBahan(int jumlahPesan) {
         this.tepungTerigu = (1000  / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
         this.gulaPasir = (100 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
         this.butter = (100 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
@@ -70,4 +70,5 @@ public class HitungBahanPizza extends Bahan{
         System.out.println("===========================================================================");
         System.out.println("Total \t\t\t" + numberFormat.format(this.totalBeratDough) + " gr \t\t Rp " + numberFormat.format(totalHargaBeli()));
     }
+
 }

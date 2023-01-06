@@ -15,7 +15,7 @@ public class HitungBahanTawar extends Bahan{
     
     //Menghitung total berat bahan
     @Override
-    public double hitungBeratBahan(double jumlahPesan) {
+    public double hitungBeratBahan(int jumlahPesan) {
         this.tepungTerigu = (1000 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
         this.gulaPasir = (125 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
         this.butter = (100 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
