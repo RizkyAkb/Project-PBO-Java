@@ -34,8 +34,8 @@ public class Pizza extends HitungBahanPizza implements Varian1{
         System.out.println("===========================================================================");
         System.out.println("Keju \t\t" + numberFormat.format(this.keju) + " gr " + "\t\t Rp " + numberFormat.format(hrgKeju));
         System.out.println("Sosis \t\t" + numberFormat.format(this.sosis) + " gr " + "\t\t Rp " + numberFormat.format(hrgSosis));
-        System.out.println("Sosis \t\t" + numberFormat.format(this.smokedBeef) + " gr " + "\t\t Rp " + numberFormat.format(hrgSmokedBeef));
-        System.out.println("Sosis \t\t" + numberFormat.format(this.bawangBombai) + " gr " + "\t\t Rp " + numberFormat.format(hrgBawangBombai));
+        System.out.println("Smoked Beef \t\t" + numberFormat.format(this.smokedBeef) + " gr " + "\t\t Rp " + numberFormat.format(hrgSmokedBeef));
+        System.out.println("Bawang Bombai \t\t" + numberFormat.format(this.bawangBombai) + " gr " + "\t\t Rp " + numberFormat.format(hrgBawangBombai));
         System.out.println("===========================================================================");
         System.out.println("Total \t\t\t" + "  \t\t Rp " + numberFormat.format(hargaVarian1)); 
         System.out.println("Modal Rp " + numberFormat.format(hargaVarian1 + totalHargaBeli()));
