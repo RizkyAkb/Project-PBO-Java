@@ -12,16 +12,17 @@ import java.text.DecimalFormat;
  */
 public abstract class Bahan {
 
+    //Dough
     double tepungTerigu, gulaPasir, butter, ragi, susuBubuk, susuCair, telur, esBatu;
-    double kemasanTepungTerigu = 1000,
+    int kemasanTepungTerigu = 1000,
             kemasanGulaPasir = 1000,
             kemasanButter = 500,
             kemasanRagi = 11,
             kemasanSusuBubuk = 1000,
             kemasanSusuCair = 1000,
             kemasanTelur = 1000,
-            kemasanEsBatu = 1000;
-    double hargaTepungTerigu = 40000,
+            kemasanEsBatu = 1000,
+            hargaTepungTerigu = 40000,
             hargaGulaPasir = 25000,
             hargaButter = 23000,
             hargaRagi = 5000,
@@ -32,9 +33,26 @@ public abstract class Bahan {
     double hrgTepungTerigu, hrgGulaPasir, hrgButter, hrgRagi, hrgSusuBubuk, hrgSusuCair, hrgTelur, hrgEsBatu;
     double totalBeratDough;
 
-    DecimalFormat numberFormat = new DecimalFormat("#.00");
+    //Varian
+    protected double keju, coklat, krim, selai, sosis, smokedBeef, bawangBombai;
+    protected int kemasanKeju = 250,
+            kemasanCoklat = 500,
+            kemasanKrim = 500, kemasanSelai = 500,
+            kemasanSosis = 1000,
+            kemasanSmokedBeef = 1000,
+            kemasanBawangBombai = 500,
+            hargaKeju = 31000,
+            hargaCoklat = 29000,
+            hargaKrim = 30000,
+            hargaSelai = 25000,
+            hargaSosis = 80000,
+            hargaSmokedBeef = 90000,
+            hargaBawangBombai = 40000,
+            jumlahPesan;
 
-    public abstract double hitungBeratBahan(double jumlahPesan);
+    protected DecimalFormat numberFormat = new DecimalFormat("#.00");
+
+    public abstract double hitungBeratBahan(int jumlahPesan);
 
     public abstract void hitungHargaBahan();
 

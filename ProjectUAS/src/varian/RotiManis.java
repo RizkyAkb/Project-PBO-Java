@@ -8,38 +8,33 @@ import bahan.*;
  *
  * @author athrees
  */
-public class RotiManis extends HitungBahanManis implements Varian1,Varian2, Varian3{
-//    HitungBahanManis rotimanis = new HitungBahanManis();
-    double keju;
-    double coklat;
-    double krim;
-    double selai;
-    double sosis;
-    double jumlahPesan;
-//    double kemasanKeju;
-//    double kemasanCoklat;
-//    double kemasanKrim;
-//    double kemasanSelai;
-//    double kemasanSosis;
-//    double hargaKeju;
-//    double hargaCoklat;
-//    double hargaKrim;
-//    double hargaSelai;
-//    double hargaSosis;
-    
-    @Override
-    public double varian1(double jumlahPesan) {
-        this.jumlahPesan = jumlahPesan;
+public class RotiManis extends HitungBahanManis implements Varian1,Varian2, Varian3{    
+//    @Override
+    public void varian1(int jumlahPesan) {         
         hitungBeratBahan(jumlahPesan);
-        tampilBahan();
-        this.keju = Math.ceil(5 * jumlahPesan / 250);
-        this.coklat = Math.ceil(10 * jumlahPesan / 500);
-        double hrgKeju = this.keju * 31000;
-        double hrgCoklat = this.coklat * 29000;        
+        hitungHargaBahan();
+        tampilBahan();                
+        this.keju = 5 * jumlahPesan;
+        this.coklat = 10 * jumlahPesan;
+        double hrgKeju = this.keju / this.kemasanKeju * this.hargaKeju;
+        double hrgCoklat = this.coklat /this.kemasanCoklat * this.hargaCoklat;        
         double hargaVarian1 = hrgKeju + hrgCoklat;
-        double totalKeuntungan = (hargaVarian1 + this.totalHargaBeli()) + ((hargaVarian1 + this.totalHargaBeli())*(50.0/100.0));
-        double hargaSatuan = Math.ceil(totalKeuntungan/jumlahPesan);
-        return hargaSatuan;
+        double totalKeuntungan = (hargaVarian1 + totalHargaBeli()) + ((hargaVarian1 + totalHargaBeli())*(50.0/100.0));
+        double hargaSatuan = Math.ceil(totalKeuntungan/jumlahPesan);        
+        
+        System.out.println("=======");
+        System.out.println("VARIAN");
+        System.out.println("===========================================================================");
+        System.out.println("Bahan           Berat diperlukan              Harga");
+        System.out.println("===========================================================================");
+        System.out.println("Keju \t\t" + numberFormat.format(this.keju) + " gr " + "\t\t Rp " + numberFormat.format(hrgKeju));
+        System.out.println("Coklat \t\t" + numberFormat.format(this.coklat) + " gr " + "\t\t Rp " + numberFormat.format(hrgCoklat));        
+        System.out.println("===========================================================================");
+        System.out.println("Total \t\t\t" + "  \t\t Rp " + numberFormat.format(hargaVarian1)); 
+        System.out.println("Modal Rp " + numberFormat.format(hargaVarian1 + totalHargaBeli()));
+        System.out.println("Total Keuntungan Rp " + numberFormat.format(totalKeuntungan));
+        System.out.println("Harga satuan roti Rp " + hargaSatuan );          
+        System.out.println(" ");
     }
     
     
@@ -52,7 +47,7 @@ public class RotiManis extends HitungBahanManis implements Varian1,Varian2, Vari
 //    }
     
     @Override
-    public double varian2(double jumlahPesan) {
+    public double varian2() {
         this.jumlahPesan = jumlahPesan;
         hitungBeratBahan(jumlahPesan);
         this.selai = Math.ceil(10 * jumlahPesan/500);
@@ -66,7 +61,7 @@ public class RotiManis extends HitungBahanManis implements Varian1,Varian2, Vari
     }
 
     @Override
-    public double varian3(double jumlahPesan) {
+    public double varian3() {
         this.jumlahPesan = jumlahPesan;
         hitungBeratBahan(jumlahPesan);
         this.keju = Math.ceil(10 * jumlahPesan/250);
@@ -77,7 +72,5 @@ public class RotiManis extends HitungBahanManis implements Varian1,Varian2, Vari
         double totalKeuntungan = (hargaVarian3 + this.totalHargaBeli()) + ((hargaVarian3 + this.totalHargaBeli())*(50.0/100.0));
         double hargaSatuan = Math.ceil(totalKeuntungan/jumlahPesan);
         return hargaSatuan;
-    }
-    
-    
+    }       
 }

@@ -9,13 +9,12 @@ package bahan;
  * @author RUDI
  */
 public class HitungBahanManis extends Bahan {
-
     double beratSatuan = 50.0;
     double beratTotal = 2350.0;    
 
     //Menghitung total berat bahan
     @Override
-    public double hitungBeratBahan(double jumlahPesan) {
+    public double hitungBeratBahan(int jumlahPesan) {        
         this.tepungTerigu = (1000 / (this.beratTotal / this.beratSatuan)) * jumlahPesan;
         this.gulaPasir = (150 / (this.beratTotal / this.beratSatuan)) * jumlahPesan;
         this.butter = (150 / (this.beratTotal / this.beratSatuan)) * jumlahPesan;
@@ -69,6 +68,6 @@ public class HitungBahanManis extends Bahan {
         System.out.println("Telur \t\t\t" + numberFormat.format(this.telur) + " gr " + "\t\t Rp " + numberFormat.format(this.hrgTelur));
         System.out.println("Es Batu \t\t" + numberFormat.format(this.esBatu) + " gr " + "\t\t Rp " + numberFormat.format(this.hrgEsBatu));
         System.out.println("===========================================================================");
-        System.out.println("Total \t\t\t" + numberFormat.format(this.totalBeratDough) + " gr \t\t Rp " + numberFormat.format(totalHargaBeli()));
+        System.out.println("Total \t\t\t" + numberFormat.format(this.totalBeratDough) + " gr \t\t Rp " + numberFormat.format(totalHargaBeli()));        
     }
 }
