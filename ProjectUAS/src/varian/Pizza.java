@@ -9,38 +9,38 @@ import bahan.*;
  * @author athrees
  */
 public class Pizza extends HitungBahanPizza implements Varian1{
-//    HitungBahanPizza Pizza = new HitungBahanPizza();
-    double keju;
-    double sosis;
-    double beef;
-    double bawang;
-    double jumlahPesan;
-
-    @Override
-    public double varian1(double jumlahPesan) {
-        this.jumlahPesan = jumlahPesan;
-        this.hitungBeratBahan(jumlahPesan);
-        this.keju = Math.ceil(30 * jumlahPesan / 250);
-        this.sosis = Math.ceil(50 * jumlahPesan / 1000);
-        this.beef = Math.ceil(50 * jumlahPesan / 1000);
-        this.sosis = Math.ceil(30 * jumlahPesan / 500);
-        double hrgKeju = this.keju * 31000;
-        double hrgSosis = this.sosis * 80000;
-        double hrgBeef = this.beef * 80000;
-        double hrgBawang = this.bawang * 40000;
-        double hargaVarian1 = hrgKeju + hrgSosis + hrgBeef + hrgBawang ;
-        double totalKeuntungan = (hargaVarian1 + this.totalHargaBeli()) + ((hargaVarian1 + this.totalHargaBeli())*(50.0/100.0));
+//    @Override
+    public void varian1(int jumlahPesan) {         
+        hitungBeratBahan(jumlahPesan);
+        hitungHargaBahan();
+        tampilBahan();                
+        this.keju = 30 * jumlahPesan;
+        this.sosis = 50 * jumlahPesan;
+        this.smokedBeef = 50 * jumlahPesan;
+        this.bawangBombai = 30 * jumlahPesan;
+        
+        double hrgKeju = this.keju / this.kemasanKeju * this.hargaKeju;
+        double hrgSosis = this.sosis / this.kemasanSosis * this.hargaSosis;
+        double hrgSmokedBeef = this.smokedBeef / this.kemasanSmokedBeef * this.hargaSmokedBeef;
+        double hrgBawangBombai = this.hargaBawangBombai / this.kemasanBawangBombai * this.hargaBawangBombai;
+        double hargaVarian1 = hrgKeju + hrgSosis + hrgSmokedBeef + hrgBawangBombai;
+        double totalKeuntungan = (hargaVarian1 + totalHargaBeli()) + ((hargaVarian1 + totalHargaBeli())*(50.0/100.0));
         double hargaSatuan = Math.ceil(totalKeuntungan/jumlahPesan);
-        return hargaSatuan;
+        
+        System.out.println("=======");
+        System.out.println("VARIAN");
+        System.out.println("===========================================================================");
+        System.out.println("Bahan           Berat diperlukan              Harga");
+        System.out.println("===========================================================================");
+        System.out.println("Keju \t\t" + numberFormat.format(this.keju) + " gr " + "\t\t Rp " + numberFormat.format(hrgKeju));
+        System.out.println("Sosis \t\t" + numberFormat.format(this.sosis) + " gr " + "\t\t Rp " + numberFormat.format(hrgSosis));
+        System.out.println("Sosis \t\t" + numberFormat.format(this.smokedBeef) + " gr " + "\t\t Rp " + numberFormat.format(hrgSmokedBeef));
+        System.out.println("Sosis \t\t" + numberFormat.format(this.bawangBombai) + " gr " + "\t\t Rp " + numberFormat.format(hrgBawangBombai));
+        System.out.println("===========================================================================");
+        System.out.println("Total \t\t\t" + "  \t\t Rp " + numberFormat.format(hargaVarian1)); 
+        System.out.println("Modal Rp " + numberFormat.format(hargaVarian1 + totalHargaBeli()));
+        System.out.println("Total Keuntungan Rp " + numberFormat.format(totalKeuntungan));
+        System.out.println("Harga satuan roti Rp " + hargaSatuan );          
+        System.out.println(" ");
     }
-    
-    
-    public void tampilVarian1(){
-        System.out.println("Varian         Berat diperlukan     Jumlah Kemasan");
-    }
-
-//    private double totalHargaBeli(){
-//        return 0;
-//        
-//    }
 }
