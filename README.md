@@ -1,4 +1,4 @@
-# PROJECT PERHITUNGAN TOKO ROTI - PEMROGRAMAN BERORIENTASI OBJEK
+# PROJECT PERHITUNGAN TOKO ROTI - PBO
  
 BERISI PERHITUNGAN MENENTUKAN JUMLAH BERAT DAN HARGA JUAL ROTI.<br>
 DISUSUN OLEH: <br>
@@ -21,4 +21,4 @@ dan juga berisi file abstract interface berupa <b>Varian1.java</b>, <b>Varian2.j
 pada package ini berisi file abstract class berupa <b>ProjectUAS.java</b>
 
 <h1>DIAGRAM</h1>
-<img src="#" alt="Alt text" title="Optional title">
+<img src="#">
