@@ -20,5 +20,5 @@ dan juga berisi file abstract interface berupa <b>Varian1.java</b>, <b>Varian2.j
 <h3><a href="ProjectUAS/src/projectuas/">Project UAS</a></h3>
 pada package ini berisi file abstract class berupa <b>ProjectUAS.java</b>
 
-//<h1>DIAGRAM</h1>//
-//<img src="DiagramTokoRotiJava.jpg" alt="Alt text" title="Optional title">//
+<h1>DIAGRAM</h1>
+<img src="#" alt="Alt text" title="Optional title">
