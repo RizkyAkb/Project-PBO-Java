@@ -54,11 +54,11 @@ public class HitungBahanManis extends Bahan {
     @Override
     public void tampilBahan() {
         hitungHargaBahan();
-        System.out.println("=======");
-        System.out.println("DOUGH");
-        System.out.println("===========================================================================");
-        System.out.println("Bahan              Berat diperlukan                 Harga");
-        System.out.println("===========================================================================");
+        System.out.println("=================================================================");
+        System.out.println("\t\t\t    DOUGH");
+        System.out.println("=================================================================");
+        System.out.println("Bahan                   Berat diperlukan             Harga");
+        System.out.println("=================================================================");
         System.out.println("Tepung Terigu \t\t" + numberFormat.format(this.tepungTerigu) + " gr " + "\t\t Rp " + numberFormat.format(this.hrgTepungTerigu));
         System.out.println("Gula Pasir \t\t" + numberFormat.format(this.gulaPasir) + " gr " + "\t\t Rp " + numberFormat.format(this.hrgGulaPasir));
         System.out.println("Butter \t\t\t" + numberFormat.format(this.butter) + " gr " + "\t\t Rp " + numberFormat.format(this.hrgButter));
@@ -67,7 +67,8 @@ public class HitungBahanManis extends Bahan {
         System.out.println("Susu Cair \t\t" + numberFormat.format(this.susuCair) + " gr " + "\t\t Rp " + numberFormat.format(this.hrgSusuCair));
         System.out.println("Telur \t\t\t" + numberFormat.format(this.telur) + " gr " + "\t\t Rp " + numberFormat.format(this.hrgTelur));
         System.out.println("Es Batu \t\t" + numberFormat.format(this.esBatu) + " gr " + "\t\t Rp " + numberFormat.format(this.hrgEsBatu));
-        System.out.println("===========================================================================");
+        System.out.println("----------------------------------------------------------------- + ");
         System.out.println("Total \t\t\t" + numberFormat.format(this.totalBeratDough) + " gr \t\t Rp " + numberFormat.format(totalHargaBeli()));        
+        System.out.println(" ");
     }
 }

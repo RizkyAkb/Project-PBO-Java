@@ -27,20 +27,21 @@ public class Pizza extends HitungBahanPizza implements Varian1{
         double totalKeuntungan = (hargaVarian1 + totalHargaBeli()) + ((hargaVarian1 + totalHargaBeli())*(50.0/100.0));
         double hargaSatuan = Math.ceil(totalKeuntungan/jumlahPesan);
         
-        System.out.println("=======");
-        System.out.println("VARIAN");
-        System.out.println("===========================================================================");
-        System.out.println("Bahan           Berat diperlukan              Harga");
-        System.out.println("===========================================================================");
-        System.out.println("Keju \t\t" + numberFormat.format(this.keju) + " gr " + "\t\t Rp " + numberFormat.format(hrgKeju));
-        System.out.println("Sosis \t\t" + numberFormat.format(this.sosis) + " gr " + "\t\t Rp " + numberFormat.format(hrgSosis));
+        System.out.println("=================================================================");
+        System.out.println("\t\t\t    VARIAN");
+        System.out.println("=================================================================");
+        System.out.println("Bahan                   Berat diperlukan             Harga");
+        System.out.println("=================================================================");
+        System.out.println("Keju \t\t\t" + numberFormat.format(this.keju) + " gr " + "\t\t Rp " + numberFormat.format(hrgKeju));
+        System.out.println("Sosis \t\t\t" + numberFormat.format(this.sosis) + " gr " + "\t\t Rp " + numberFormat.format(hrgSosis));
         System.out.println("Smoked Beef \t\t" + numberFormat.format(this.smokedBeef) + " gr " + "\t\t Rp " + numberFormat.format(hrgSmokedBeef));
         System.out.println("Bawang Bombai \t\t" + numberFormat.format(this.bawangBombai) + " gr " + "\t\t Rp " + numberFormat.format(hrgBawangBombai));
-        System.out.println("===========================================================================");
-        System.out.println("Total \t\t\t" + "  \t\t Rp " + numberFormat.format(hargaVarian1)); 
-        System.out.println("Modal Rp " + numberFormat.format(hargaVarian1 + totalHargaBeli()));
-        System.out.println("Total Keuntungan Rp " + numberFormat.format(totalKeuntungan));
-        System.out.println("Harga satuan roti Rp " + hargaSatuan );          
+        System.out.println("-----------------------------------------------------------------");
+        System.out.println("Total \t\t\t"  + "  \t\t\t Rp " + numberFormat.format(hargaVarian1)); 
+        System.out.println(" ");
+        System.out.println("Modal \t\t  : Rp " + numberFormat.format(hargaVarian1 + totalHargaBeli()));
+        System.out.println("Total Keuntungan  : Rp " + numberFormat.format(totalKeuntungan));
+        System.out.println("Harga satuan roti : Rp " + hargaSatuan );          
         System.out.println(" ");
     }
 }

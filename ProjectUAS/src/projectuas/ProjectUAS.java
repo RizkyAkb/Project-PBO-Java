@@ -25,11 +25,11 @@ public class ProjectUAS {
         boolean main = false;
         while (!main) {
             System.out.println("TOKO ROTI PAK RAYY");
-            System.out.println("===================");
+            System.out.println("=======================");
             System.out.println("1. Menu");
             System.out.println("2. Pesanan");
             System.out.println("3. Exit");
-            System.out.println("===================");
+            System.out.println("=======================");
             System.out.print("Pilihan : ");
             Scanner input = new Scanner(System.in);
             int mainmenu = input.nextInt();
@@ -72,6 +72,7 @@ public class ProjectUAS {
 
                 case 2:
                     // Pesanan
+                    System.out.println(" ");
                     System.out.println("=======================");
                     System.out.println("Silahkan Pilih Menu");
                     System.out.println("=======================");
@@ -81,9 +82,9 @@ public class ProjectUAS {
                     System.out.println("4. Roti Tawar Varian 1");
                     System.out.println("5. Roti Tawar Varian 2");
                     System.out.println("6. Pizza Varian 1");
-                    System.out.print("Pilih Menu : ");
+                    System.out.print("Pilih Menu    : ");
                     int pesan = input.nextInt();
-                    System.out.print("Pilih Jumlah : ");
+                    System.out.print("Pilih Jumlah  : ");
                     int jumlahPesan = input.nextInt();
                     if (pesan == 1) {
                         RotiManis rm = new RotiManis();
