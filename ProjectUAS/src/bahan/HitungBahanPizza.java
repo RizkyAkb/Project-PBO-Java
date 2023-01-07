@@ -9,12 +9,12 @@ package bahan;
  * @author RUDI
  */
 public class HitungBahanPizza extends Bahan{
-    double beratSatuan = 190.0;
-    double beratTotal = 1950.0;
+    private double beratSatuan = 190.0;
+    private double beratTotal = 1950.0;
     
     // Menghitung total berat bahan
     @Override
-    public double hitungBeratBahan(int jumlahPesan) {
+    protected double hitungBeratBahan(int jumlahPesan) {
         this.tepungTerigu = (1000  / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
         this.gulaPasir = (100 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
         this.butter = (100 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
@@ -32,7 +32,7 @@ public class HitungBahanPizza extends Bahan{
     
     //menghitung harga bahan satuan berdasarkan banyaknya bahan yang diperlukan
     @Override
-    public void hitungHargaBahan() {
+    protected void hitungHargaBahan() {
         this.hrgTepungTerigu = this.tepungTerigu / this.kemasanTepungTerigu * this.hargaTepungTerigu;
         this.hrgGulaPasir = this.gulaPasir / this.kemasanGulaPasir * this.hargaGulaPasir;
         this.hrgButter = this.butter / this.kemasanButter * this.hargaButter;
@@ -45,14 +45,14 @@ public class HitungBahanPizza extends Bahan{
      
     //Menghitung harga yang perlu dibayar untuk bahan yang dibeli
     @Override
-    public double totalHargaBeli() {
+    protected double totalHargaBeli() {
         double totalHrgBeli = this.hrgTepungTerigu + this.hrgGulaPasir + this.hrgButter + this.hrgRagi + this.hrgSusuBubuk + this.hrgSusuCair + this.hrgTelur + this.hrgEsBatu;
         return totalHrgBeli;
     }
      
     //Menampilkan tabel bahan    
     @Override
-    public void tampilBahan() {
+    protected void tampilBahan() {
         hitungHargaBahan();
         System.out.println("=======");
         System.out.println("DOUGH");

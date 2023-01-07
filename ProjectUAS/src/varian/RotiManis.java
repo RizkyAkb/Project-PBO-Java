@@ -12,8 +12,7 @@ public class RotiManis extends HitungBahanManis implements Varian1,Varian2, Vari
 //    @Override
 
     /**
-     *
-     * @param jumlahPesan
+     *     
      */
         @Override
     public void varian1(int jumlahPesan) {         

@@ -86,44 +86,25 @@ public class ProjectUAS {
                     System.out.print("Pilih Jumlah : ");
                     int jumlahPesan = input.nextInt();
                     if (pesan == 1) {
-//                        HitungBahanManis hbm = new HitungBahanManis();
-//                        hbm.hitungBeratBahan(jumlahPesan);
-//                    hbm.tampilBahan();
                         RotiManis rm = new RotiManis();
                         rm.varian1(jumlahPesan);
-//                        System.out.println("Harga satuan : " + rm.varian1(jumlahPesan));
-//                    } else if (pesan == 2) {
-//                        HitungBahanManis hbm = new HitungBahanManis();
-//                        hbm.hitungBeratBahan(jumlahPesan);
-//                        hbm.tampilBahan();
-//                        RotiManis rm = new RotiManis();
-//                        System.out.println("Harga satuan : " + rm.varian2(jumlahPesan));
-//                    } else if (pesan == 3) {
-//                        HitungBahanManis hbm = new HitungBahanManis();
-//                        hbm.hitungBeratBahan(jumlahPesan);
-//                        hbm.tampilBahan();
-//                        RotiManis rm = new RotiManis();
-//                        System.out.println("Harga satuan : " + rm.varian3(jumlahPesan));
-//                    } else if (pesan == 4) {
-//                        HitungBahanTawar hbt = new HitungBahanTawar();
-//                        hbt.hitungBeratBahan(jumlahPesan);
-//                        hbt.tampilBahan();
-//                        RotiTawar rt = new RotiTawar();
-//                        System.out.println("Harga satuan : " + rt.varian1(jumlahPesan));
-//                    } else if (pesan == 5) {
-//                        HitungBahanTawar hbt = new HitungBahanTawar();
-//                        hbt.hitungBeratBahan(jumlahPesan);
-//                        hbt.tampilBahan();
-//                        RotiTawar rt = new RotiTawar();
-//                        System.out.println("Harga satuan : " + rt.varian2(jumlahPesan));
-//                    } else if (pesan == 6) {
-//                        HitungBahanPizza hbp = new HitungBahanPizza();
-//                        hbp.hitungBeratBahan(jumlahPesan);
-//                        hbp.tampilBahan();
-//                        Pizza p = new Pizza();
-//                        System.out.println("Harga satuan : " + p.varian1(jumlahPesan));
-//                    } else {
-//                        System.out.println("Pilihan tidak tersedia");
+                    } else if (pesan == 2) {
+                        RotiManis rm = new RotiManis();
+                        rm.varian2(jumlahPesan);
+                    } else if (pesan == 3) {                        
+                        RotiManis rm = new RotiManis();
+                        rm.varian3(jumlahPesan);
+                    } else if (pesan == 4) {
+                        RotiTawar rt = new RotiTawar();
+                        rt.varian1(jumlahPesan);
+                    } else if (pesan == 5) {                        
+                        RotiTawar rt = new RotiTawar();
+                        rt.varian2(jumlahPesan);
+                    } else if (pesan == 6) {                        
+                        Pizza p = new Pizza();
+                        p.varian1(jumlahPesan);
+                    } else {
+                        System.out.println("Pilihan tidak tersedia");
                     }
                     break;
                 case 3:

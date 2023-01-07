@@ -25,7 +25,7 @@ public class HitungBahanTawar extends Bahan{
         this.telur = (70 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;
         this.esBatu = (300 / (this.beratTotal/this.beratSatuan)) * jumlahPesan;            
         
-        double totalBeratDough = this.tepungTerigu + this.gulaPasir + this.butter 
+        this.totalBeratDough = this.tepungTerigu + this.gulaPasir + this.butter 
                 + this.ragi + this.susuBubuk + this.susuCair + this.telur 
                 + this.esBatu;
         return totalBeratDough;

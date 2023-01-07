@@ -9,7 +9,7 @@ import bahan.*;
  * @author athrees
  */
 public class Pizza extends HitungBahanPizza implements Varian1{
-//    @Override
+    @Override    
     public void varian1(int jumlahPesan) {         
         hitungBeratBahan(jumlahPesan);
         hitungHargaBahan();
@@ -22,7 +22,7 @@ public class Pizza extends HitungBahanPizza implements Varian1{
         double hrgKeju = this.keju / this.kemasanKeju * this.hargaKeju;
         double hrgSosis = this.sosis / this.kemasanSosis * this.hargaSosis;
         double hrgSmokedBeef = this.smokedBeef / this.kemasanSmokedBeef * this.hargaSmokedBeef;
-        double hrgBawangBombai = this.hargaBawangBombai / this.kemasanBawangBombai * this.hargaBawangBombai;
+        double hrgBawangBombai = this.bawangBombai / this.kemasanBawangBombai * this.hargaBawangBombai;
         double hargaVarian1 = hrgKeju + hrgSosis + hrgSmokedBeef + hrgBawangBombai;
         double totalKeuntungan = (hargaVarian1 + totalHargaBeli()) + ((hargaVarian1 + totalHargaBeli())*(50.0/100.0));
         double hargaSatuan = Math.ceil(totalKeuntungan/jumlahPesan);
